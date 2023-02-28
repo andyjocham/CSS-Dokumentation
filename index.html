@@ -1,0 +1,192 @@
+<html>
+  <a id="oben"></a>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>CSS Dokumentation</title>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1 style="text-align: center;">CSS Dokumentation (cascading style sheets)</h1>
+        <hr><br>
+        <nav>
+          <a class="knopf" href="#syntax">Syntax von CSS</a>
+          <a class="knopf" href="#verschiede">verschiedene CSS Angaben</a>
+          <a class="knopf" href="#werte">Wert Angaben</a>
+          <a class="knopf" href="#links">Links optisch verändern</a>
+          <a class="knopf" href="links.html">nützliche Links</a>
+        </nav>
+      </header>
+      <br />
+      <ul>
+        <li>CSS enthält keinen HTML-Inhalt</li>
+        <li>Wird zur Formatierung von HTML-Tags verwendet</li>
+        <li>beeinflusst Optik, Darstellung, Design</li>
+      </ul>
+
+      <h3>Verwendung von CSS:</h3>
+      <strong>inline:</strong> Option (style) zum Tag<br />
+      CSS-Formatierung gilt nur für diesen Tag an dieser Stelle
+      <pre><code>&lt h1 style="CSS-Angabe1; CSS-Angabe2;">Text &lt/h1&gt</code></pre>
+      <br />
+
+      <strong>Datei-bezogen:</strong> CSS-Angaben im head-Tag<br />
+      CSS-Formatierung gilt für jeden Tag in der Datei
+      <pre><code>&lthead>
+    ...
+    &ltstyle rel="stylesheet"&gt
+        h1 { CSS-Angabe1; CSS-Angabe2; }
+        &lt/style> 
+        &lt/head>
+        &ltbody>
+    ...
+    &lth1&gttext&lt/h1&gt</code></pre>
+      <br />
+
+      <strong> externe Datei:</strong> eigene CSS-Datei<br />
+      CSS-Formatierung erfolgt in einer eigenen Datei und kann somit in mehreren
+      HTML-Seiten eingebunden werden<br />
+      <pre><code>CSS-Datei: standard.css
+    body { CSS-Angabe1; CSS-Angabe2; }
+    h1 { CSS-Angabe1; CSS-Angabe2; }
+    ...
+    HTML-Seiten: einbinden der CSS-Datei
+    ...
+    &lthead>
+    ...
+    &ltlink rel="stylesheet" href="standard.css"&gt
+    ...
+    &lt/head&gt
+    &ltbody&gt
+    ..
+    &lth1&gttext&lt/h1&gt
+            ...</code></pre>
+      <a class="knopf" href="#oben">nach oben</a>
+      <hr />
+      <a id="syntax"><h3>Syntax von CSS-Angaben</h3></a>
+
+      allgemein gilt:
+      <ul>
+        <li>case-sensitive</li>
+        <li>Vererbung der Angaben</li>
+        <li>Einrückungen bzw. Leerstellen haben keine Auswirkung</li>
+        <li>Kommentare (mehrzeilig) mit /* und */</li>
+      </ul>
+      <pre><code>tag { CSS-Angabe1 : Wert; CSS-Angabe2 : Wert; }
+  Bsp: Überschrift "h1" in roter Schrift und 24pt Größe
+
+  CSS-Datei bzw. im head über style-Tag:
+  h1 { color     : red;   /* Text-Farbe */
+  font-size : 24pt;  /* Text-Groesse */
+  }
+             
+  inline:
+  &lth1 style="color:red; font-size:24pt;"&gt...&lt/h1&gt
+        </code></pre>
+
+      <a id="werte"><h3>Wert-Angaben:</h3></a>
+      <ul>
+        <li>Größen: in Prozent (75%), Ganzzahl/Fließkommazahl + Einheit</li>
+        <li>
+          Einheiten: cm, mm, in (inch), pt (Typographie-Punkt), pc (Pica-Punkt),
+          px (Pixel), em (Laufweite von "m"), ex (Höhe von "x")
+        </li>
+        <li>Farbangaben: vordefinierte Bezeichnung (amerikanisch)</li>
+        <li>RGB-Code (hexadezimal): 3-stellig oder 6-stellig</li>
+        <li>Werte von 00 bis ff</li>
+        <li>#4488aa --> hex 44 rot, hex 88 grün, hex aa blau</li>
+        <li>#48a --> hex 44 rot, hex 88 grün, hex aa blau</li>
+        <li>RGB-Code (dezimal): Werte von 0 bis 255</li>
+        <li>rgb(120, 80, 240) --> rot 120, grün 80, blau 240</li>
+      </ul>
+      <a class="knopf" href="#oben">nach oben</a>
+
+      <hr />
+      <a id="verschiede"><h3>verschiedene CSS-Angaben:</h3></a>
+
+      Margin- bzw. Padding-Angaben:
+      <ul>
+        <li>eine Angabe: "oben/rechts/unten/links"</li>
+        <li>zwei Angaben: "oben/unten" "rechts/links"</li>
+        <li>drei Angaben: "oben" "rechts/links" "unten"</li>
+        <li>vier Angaben: "oben" "rechts" "unten" "links"</li>
+      </ul>
+
+      Text-align-Abgaben:
+      <ul>
+        <li>
+          left (linksbündig), center (zentriert), right (rechtsbündig), justify
+          (Blocksatz)
+        </li>
+      </ul>
+
+      Border-Angabe:
+      <ul>
+        <li>border: Linien-Dicke Linien-Art Linien-Farbe</li>
+        <li>border-top: Linien-Dicke Linien-Art Linien-Farbe /* oben */</li>
+        <li>border-right: Linien-Dicke Linien-Art Linien-Farbe /* rechts */</li>
+        <li>border-bottom: Linien-Dicke Linien-Art Linien-Farbe /* unten */</li>
+        <li>border-left: Linien-Dicke Linien-Art Linien-Farbe /* links */</li>
+      </ul>
+
+      Linien-Art:
+      <ul>
+        <li>solid - durchgezogen</li>
+        <li>double - Doppelinie durchgezogen</li>
+        <li>dashed - gestrichelt</li>
+        <li>dotted - gepunktet</li>
+        <li>ridge - erhaben</li>
+        <li>groove - abgesenkt</li>
+        <li>inset - eingedrückt</li>
+        <li>outset - herausgedrückt</li>
+      </ul>
+      <a class="knopf" href="#oben">nach oben</a>
+      <hr />
+
+      <a id="links"><h3>Links optisch verändern:</h3></a>
+
+      Standard-Optik fuer alle Links
+      <pre><code>a {
+  font-weight: bold;                     /* Schrift-Gewicht (fett)    */
+  text-decoration: none;                 /* Unterstreichung entfernen */
+  color: #2020ff;                        /* Schrift-Farbe             */
+}
+</code></pre>
+      Link-Zustände anpassen
+      <pre><code>a:visited { color: #2020aa; }
+a:focus   { color: #aaaa20; }
+a:hover   { color: #20aa20; }
+a:active  { color: orange; }
+</code></pre>
+
+      Standard-Optik fuer alle Button-Links
+      <pre><code>a.knopf { 
+  border: 1px solid black;
+  padding: 4pt 1em 4pt;
+  border-radius: 4px;
+  background-color: #c4c4c4;
+  color: #000000;
+  box-shadow: 2px 2px 4px black; 
+}
+a.knopf:hover, a.knopf:focus, a.knopf:active {
+  background-color: #909090;
+  color: #ffffff;
+  box-shadow: -2px -2px 4px black;
+}
+</code></pre>
+
+      Zustände von Links:<br />
+      <ul>
+        <li>link : nicht benutzter Link<br /></li>
+        <li>visited : Link wurde bereits benutzt, Seite wurde besucht<br /></li>
+        <li>focus : Link ist angewählt (Tab-Taste)<br /></li>
+        <li>hover : Maus schwebt über dem link<br /></li>
+        <li>active : gedrückter Link<br /><br /></li>
+      </ul>
+
+      <a class="knopf" href="#oben">nach oben</a>
+    </main>
+  </body>
+</html>

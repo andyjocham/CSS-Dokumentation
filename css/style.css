@@ -1,0 +1,44 @@
+
+
+code {
+    display: block;
+    font-family: monospace;
+    color: black;
+    white-space: pre;
+    padding: 0 1em;
+    background-color: #c4c4c4;
+    margin: 5px 0px 0px 5px;
+    width: 30%;
+    font-size: 14px;
+      }
+
+  a.knopf {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 4pt 1em 4pt;
+    border-radius: 4px;
+    background-color: #c4c4c4;
+    color: #000000;
+    box-shadow: 2px 2px 4px rgb(192, 192, 192); 
+  }
+  
+  a.knopf:hover, a.knopf:focus, a.knopf:active {
+    background-color: #909090;
+    color: #ffffff;
+    box-shadow: -2px -2px 4px black;
+  }
+
+  h3 {
+    text-decoration:underline;
+  }
+
+  body {
+    font: 100% Courier New;
+    margin: 20px;
+    line-height: 26px;
+    background-color: #202020;
+}
+
+main {
+  padding: 10px;
+  color: #84c754;
+}
