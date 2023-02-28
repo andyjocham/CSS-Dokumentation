@@ -1,16 +1,5 @@
 
 
-code {
-    display: block;
-    font-family: monospace;
-    color: black;
-    white-space: pre;
-    padding: 0 1em;
-    background-color: #c4c4c4;
-    margin: 5px 0px 0px 5px;
-    width: 700px;
-    font-size: 14px;
-      }
 textarea {
   display: block;
   font-family: monospace;
@@ -19,7 +8,6 @@ textarea {
   padding: 5px 5px;
   background-color: #c4c4c4;
   margin: 5px 0px 0px 5px;
-  width: 700px;
   font-size: 14px;
   resize: none;
   border: 2px solid #000000;
@@ -33,7 +21,9 @@ textarea {
     border-radius: 4px;
     background-color: #c4c4c4;
     color: #000000;
-    box-shadow: 2px 2px 4px rgb(192, 192, 192); 
+    box-shadow: 2px 2px 2px rgb(192, 192, 192);
+    text-decoration: none;
+
   }
   
   a.knopf:hover, a.knopf:focus, a.knopf:active {
