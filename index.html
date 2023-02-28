@@ -17,7 +17,7 @@
           <a class="knopf" href="#syntax">Syntax von CSS</a>
           <a class="knopf" href="#verschiedene">verschiedene CSS Angaben</a>
           <a class="knopf" href="#werte">Wert Angaben</a>
-          <a class="knopf" href="#links">Links optisch verändern</a><br><br>
+          <a class="knopf" href="#links">Links optisch verändern</a><br /><br />
           <a class="knopf" href="#tabellen">Tabellen und Listen</a>
           <a class="knopf" href="links.html">nützliche Links</a>
         </nav>
@@ -32,12 +32,15 @@
       <h3>Verwendung von CSS:</h3>
       <strong>inline:</strong> Option (style) zum Tag<br />
       CSS-Formatierung gilt nur für diesen Tag an dieser Stelle
-      <pre><code>&lt h1 style="CSS-Angabe1; CSS-Angabe2;">Text &lt/h1&gt</code></pre>
+      <textarea cols="90" readonly rows="1">
+&lt h1 style="CSS-Angabe1; CSS-Angabe2;">Text &lt/h1&gt</textarea
+      >
       <br />
 
       <strong>Datei-bezogen:</strong> CSS-Angaben im head-Tag<br />
       CSS-Formatierung gilt für jeden Tag in der Datei
-      <pre><code>&lthead>
+      <textarea cols="90" readonly rows="9">
+&lthead>
     ...
     &ltstyle rel="stylesheet"&gt
         h1 { CSS-Angabe1; CSS-Angabe2; }
@@ -45,13 +48,15 @@
         &lt/head>
         &ltbody>
     ...
-    &lth1&gttext&lt/h1&gt</code></pre>
+    &lth1&gttext&lt/h1&gt</textarea
+      >
       <br />
 
       <strong> externe Datei:</strong> eigene CSS-Datei<br />
       CSS-Formatierung erfolgt in einer eigenen Datei und kann somit in mehreren
       HTML-Seiten eingebunden werden<br />
-      <pre><code>CSS-Datei: standard.css
+      <textarea cols="90" readonly rows="15">
+CSS-Datei: standard.css
     body { CSS-Angabe1; CSS-Angabe2; }
     h1 { CSS-Angabe1; CSS-Angabe2; }
     ...
@@ -65,8 +70,9 @@
     &ltbody&gt
     ..
     &lth1&gttext&lt/h1&gt
-            ...</code></pre>
-            <a class="knopf" href="./index.html">nach oben</a>
+            ...</textarea
+      ><br />
+      <a class="knopf" href="./index.html">nach oben</a>
       <hr />
       <a id="syntax"><h3>Syntax von CSS-Angaben</h3></a>
 
@@ -77,7 +83,8 @@
         <li>Einrückungen bzw. Leerstellen haben keine Auswirkung</li>
         <li>Kommentare (mehrzeilig) mit /* und */</li>
       </ul>
-      <pre><code>tag { CSS-Angabe1 : Wert; CSS-Angabe2 : Wert; }
+      <textarea cols="90" readonly rows="10">
+tag { CSS-Angabe1 : Wert; CSS-Angabe2 : Wert; }
   Bsp: Überschrift "h1" in roter Schrift und 24pt Größe
 
   CSS-Datei bzw. im head über style-Tag:
@@ -86,8 +93,8 @@
   }
              
   inline:
-  &lth1 style="color:red; font-size:24pt;"&gt...&lt/h1&gt
-        </code></pre>
+  &lth1 style="color:red; font-size:24pt;"&gt...&lt/h1&gt</textarea
+      >
 
       <a id="werte"><h3>Wert-Angaben:</h3></a>
       <ul>
@@ -151,21 +158,24 @@
       <a id="links"><h3>Links optisch verändern:</h3></a>
 
       Standard-Optik fuer alle Links
-      <pre><code>a {
+      <textarea cols="90" readonly rows="6">
+a {
   font-weight: bold;                     /* Schrift-Gewicht (fett)    */
   text-decoration: none;                 /* Unterstreichung entfernen */
   color: #2020ff;                        /* Schrift-Farbe             */
-}
-</code></pre>
+}</textarea
+      >
       Link-Zustände anpassen
-      <pre><code>a:visited { color: #2020aa; }
+      <textarea cols="90" readonly rows="4">
+a:visited { color: #2020aa; }
 a:focus   { color: #aaaa20; }
 a:hover   { color: #20aa20; }
-a:active  { color: orange; }
-</code></pre>
+a:active  { color: orange; }</textarea
+      >
 
       Standard-Optik fuer alle Button-Links
-      <pre><code>a.knopf { 
+      <textarea cols="90" readonly rows="13">
+a.knopf { 
   border: 1px solid black;
   padding: 4pt 1em 4pt;
   border-radius: 4px;
@@ -177,8 +187,8 @@ a.knopf:hover, a.knopf:focus, a.knopf:active {
   background-color: #909090;
   color: #ffffff;
   box-shadow: -2px -2px 4px black;
-}
-</code></pre>
+}</textarea
+      ><br />
 
       Zustände von Links:<br />
       <ul>
@@ -194,7 +204,7 @@ a.knopf:hover, a.knopf:focus, a.knopf:active {
       <hr />
       <a id="tabellen"><h3>Styles für Tabellen und Listen</h3></a>
 
-      <pre><code>table {
+      <textarea cols="90" readonly rows="12">table {
 width: 40%;
 }
 table, tr, td, th {
@@ -203,12 +213,13 @@ border-collapse: collapse; /* sorgt dafür das die Border zusammenfallen */
 text-align: center;
 }
 th, td { padding: 2pt 2pt 2pt 4pt; }
-td.zahl { text-align: right; }
-</code></pre>
+td.zahl { text-align: right; }</textarea
+      >
       Listen:<br />
-      <pre><code>ul {style list-style-type: circle, square, none}
+      <textarea cols="90" readonly rows="3">ul {style list-style-type: circle, square, none}
 ol {style list-style-position: inside}
-ol {style list-style-type: lower-roman, upper-roman, decimal, upper-latin, lower-latin}</code></pre><br>
+ol {style list-style-type: lower-roman, upper-roman, decimal, upper-latin, lower-latin}</textarea>
+      <br />
       <a class="knopf" href="./index.html">nach oben</a>
     </main>
   </body>
