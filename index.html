@@ -9,13 +9,17 @@
   <body>
     <main>
       <header>
-        <h1 style="text-align: center;">CSS Dokumentation (cascading style sheets)</h1>
-        <hr><br>
+        <h1 style="text-align: center">
+          CSS Dokumentation (cascading style sheets)
+        </h1>
+        <hr />
+        <br />
         <nav>
           <a class="knopf" href="#syntax">Syntax von CSS</a>
-          <a class="knopf" href="#verschiede">verschiedene CSS Angaben</a>
+          <a class="knopf" href="#verschiedene">verschiedene CSS Angaben</a>
           <a class="knopf" href="#werte">Wert Angaben</a>
-          <a class="knopf" href="#links">Links optisch verändern</a>
+          <a class="knopf" href="#links">Links optisch verändern</a><br><br>
+          <a class="knopf" href="#tabellen">Styles für Tabellen und Listen</a>
           <a class="knopf" href="links.html">nützliche Links</a>
         </nav>
       </header>
@@ -104,7 +108,7 @@
       <a class="knopf" href="#oben">nach oben</a>
 
       <hr />
-      <a id="verschiede"><h3>verschiedene CSS-Angaben:</h3></a>
+      <a id="verschiedene"><h3>verschiedene CSS-Angaben:</h3></a>
 
       Margin- bzw. Padding-Angaben:
       <ul>
@@ -186,6 +190,27 @@ a.knopf:hover, a.knopf:focus, a.knopf:active {
         <li>active : gedrückter Link<br /><br /></li>
       </ul>
 
+      <a class="knopf" href="#oben">nach oben</a>
+
+      <hr />
+      <br />
+      <a id="tabellen"><h3>Styles für Tabellen und Listen</h3></a>
+
+      <pre><code>table {
+width: 40%;
+}
+table, tr, td, th {
+border: 1px solid #c4c4c4;
+border-collapse: collapse; /* sorgt dafür das die Border zusammenfallen */
+text-align: center;
+}
+th, td { padding: 2pt 2pt 2pt 4pt; }
+td.zahl { text-align: right; }
+</code></pre>
+      Listen:<br />
+      <pre><code>ul {style list-style-type: circle, square, none}
+ol {style list-style-position: inside}
+  </code></pre>
       <a class="knopf" href="#oben">nach oben</a>
     </main>
   </body>
