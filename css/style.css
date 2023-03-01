@@ -15,35 +15,39 @@ textarea {
   box-shadow: 0px 0px 2px #c4c4c4;
 }
 
-  a.knopf {
-    border: 1px solid rgb(255, 255, 255);
-    padding: 4pt 1em 4pt;
-    border-radius: 4px;
-    background-color: #c4c4c4;
-    color: #000000;
-    box-shadow: 2px 2px 2px rgb(192, 192, 192);
+a:visited { color: #84c754; }
+a:focus   { color: #aaaa20; }
+a:hover   { color: #20aa20; }
+a:active  { color: orange; }
+
+
+  a {
+    font: 100% Courier New;
+    background-color: #202020;
+    color: #84c754;
     text-decoration: none;
-
-  }
-  
-  a.knopf:hover, a.knopf:focus, a.knopf:active {
-    background-color: #909090;
-    color: #ffffff;
-    box-shadow: -2px -2px 4px black;
-  }
-
-  h3 {
-    text-decoration:underline;
-  }
-
+    font-weight: bold;
+    font-size: 13pt;
+ }
   body {
     font: 100% Courier New;
     margin: 20px;
     line-height: 26px;
     background-color: #202020;
+    color: #84c754;
 }
 
-main {
-  padding: 10px;
-  color: #84c754;
+nav {
+  float: left;
+  display: block;
+  line-height: 30px;
+}
+nav ul {
+    list-style-type: none;
+  }
+
+
+div.textbereich {
+  margin-left: 330px;
+  padding: 5px 20px;
 }
