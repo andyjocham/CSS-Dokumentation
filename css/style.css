@@ -41,6 +41,7 @@ nav {
   float: left;
   display: block;
   line-height: 30px;
+  position:fixed;
 }
 nav ul {
     list-style-type: none;
