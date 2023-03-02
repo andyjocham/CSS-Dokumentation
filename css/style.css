@@ -74,7 +74,7 @@ nav ul {
   top: 30px;
   left: 100px;
   position: fixed;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   filter: invert(80%);
 }

@@ -15,12 +15,14 @@
       </header>
       <nav>
           <ul>
-            <li><a href="./index.html">Home</a></li>
-          <li><a href="#syntax">Syntax von CSS</a></li>
-          <li><a href="#verschiedene">verschiedene CSS Angaben</a></li>
-          <li><a href="#werte">Wert Angaben</a></li>
-          <li><a href="#links">Links optisch verändern</a></li>
-          <li><a href="#tabellen">Tabellen und Listen</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html#syntax">Syntax von CSS</a></li>
+          <li><a href="./index.html#verschiedene">verschiedene CSS Angaben</a></li>
+          <li><a href="./index.html#werte">Wert Angaben</a></li>
+          <li><a href="./index.html#links">Links optisch verändern</a></li>
+          <li><a href="./index.html#tabellen">Tabellen und Listen</a></li>
+          <li><a href="./index.html#hintergrund">Hintergründe einbinden</a></li>
+          <li><a href="./index.html#flex">Responsives Design</a></li>
           <li><a href="links.html">nützliche Links</a></li>
         </ul>
       </nav>
@@ -74,7 +76,6 @@ CSS-Datei: standard.css
     &lth1&gttext&lt/h1&gt
             ...</textarea
         ><br />
-        <a class="knopf" href="./index.html">nach oben</a>
         <hr />
         <a id="syntax"><h3>Syntax von CSS-Angaben</h3></a>
 
@@ -113,7 +114,7 @@ tag { CSS-Angabe1 : Wert; CSS-Angabe2 : Wert; }
           <li>RGB-Code (dezimal): Werte von 0 bis 255</li>
           <li>rgb(120, 80, 240) --&gt rot 120, grün 80, blau 240</li>
         </ul>
-        <a class="knopf" href="./index.html">nach oben</a>
+
 
         <hr />
         <a id="verschiedene"><h3>verschiedene CSS-Angaben:</h3></a>
@@ -158,7 +159,7 @@ tag { CSS-Angabe1 : Wert; CSS-Angabe2 : Wert; }
           <li>inset - eingedrückt</li>
           <li>outset - herausgedrückt</li>
         </ul>
-        <a class="knopf" href="./index.html">nach oben</a>
+
         <hr />
 
         <a id="links"><h3>Links optisch verändern:</h3></a>
@@ -207,7 +208,7 @@ a.knopf:hover, a.knopf:focus, a.knopf:active {
           <li>active : gedrückter Link<br /><br /></li>
         </ul>
 
-        <a class="knopf" href="./index.html">nach oben</a>
+
 
         <hr />
         <a id="tabellen"><h3>Styles für Tabellen und Listen</h3></a>
@@ -231,8 +232,75 @@ ol {style list-style-position: inside}
 ol {style list-style-type: lower-roman, upper-roman, decimal, upper-latin, lower-latin}</textarea
         >
         <br />
-        <a class="knopf" href="./index.html">nach oben</a>
+
+
+        <hr />
+        <a id="hintergrund"><h3>Hintergrundbilder mit CSS einbinden</h3></a>
+
+        <textarea cols="90" readonly rows="13">
+.standard { background-image: url(images/jlh_hand-op42.jpeg); }
+.noRepeat { background-image: url(images/jlh_hand-op42.jpeg);
+            background-repeat: no-repeat; }
+.repeatX  { background-image: url(images/jlh_hand-op42.jpeg);
+            background-repeat: repeat-x; }
+.repeatY  { background-image: url(images/jlh_hand-op42.jpeg);
+            background-repeat: repeat-y; }
+.position { background-image: url(images/jlh_hand-op42.jpeg);
+            background-repeat: no-repeat; 
+            background-position: bottom right; }
+.attach   { background-image: url(images/jlh_hand-op42.jpeg); 
+            background-attachment: fixed;  }</textarea><br />
+
+        
+        
+        <hr />
+        <a id="flex"><h3>Responsives Design mit Flex</h3></a>
+
+        <textarea cols="90" readonly rows="10">
+<style rel="stylesheet">
+  .responsive { display: flex; }
+  .left  { flex: 70%; background-color: #222; color: #ddd; padding: 0.5em; }
+  .right { flex: 30%; padding: 0.5em; }
+  .right img { width: 100%; }
+  @media (max-width: 600px) {
+    .responsive { flex-direction: column; }
+  }
+</style>
+        </textarea><br />
+     
+ <a id="viewport"><h3>Responsives Design mit Viewport</h3></a>
+
+        <textarea cols="90" readonly rows="17">
+<style rel="stylesheet">
+  * { box-sizing: border-box; }
+  nav { overflow: hidden; background-color: #222; }
+  nav a { 
+    float: left; display: block; 
+    color: #eee; text-decoration: none; font-weight: bold;
+    padding: 1ex 1em;
+  }
+  @media screen and (max-width: 700px) {
+    nav { background-color: #eee; }
+    nav a { 
+      float: none; width: 100%; 
+      color: #222;
+    }	
+  }
+  </style>
+        </textarea><br />
+     
+
       </div>
+      <a href="./index.html">nach oben</a>
     </main>
   </body>
 </html>
+
+<!-- Vorlage 
+
+        <hr />
+        <a id="tabellen"><h3>Styles für Tabellen und Listen</h3></a>
+
+        <textarea cols="90" readonly rows="12"></textarea><br />
+        <a href="./index.html">nach oben</a>
+-->
