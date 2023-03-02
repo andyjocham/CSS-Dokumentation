@@ -23,6 +23,7 @@
           <li><a href="./index.html#tabellen">Tabellen und Listen</a></li>
           <li><a href="./index.html#hintergrund">Hintergründe einbinden</a></li>
           <li><a href="./index.html#flex">Responsives Design</a></li>
+          <li><a href="./index.html#nav">Navigation links setzen</a></li>
           <li><a href="links.html">nützliche Links</a></li>
         </ul>
       </nav>
@@ -288,6 +289,28 @@ ol {style list-style-type: lower-roman, upper-roman, decimal, upper-latin, lower
   }
   </style>
         </textarea><br />
+
+        <hr />
+        <a id="nav"><h3>Navigation links setzen</h3></a>
+
+        <textarea cols="90" readonly rows="16">
+          bei "nav" hinzufügen:
+  float: left;                /* Navigation links setzen           */
+  width: 10em;                /* Breite fixieren                   */
+  padding-top: 10px;          /* nach oben absetzen                */
+	      	
+bei "nav > a" hinzufügen:
+  display: block;             /* Links untereinander setzen        */
+  line-height: 24pt;          /* vertikaler Abstand zwischen Links */
+	      	
+bei "main" hinzuügen:
+  float: right;               /* Hauptteil nach rechts setzen      */
+  width: calc(100% - 11em);   /* Breite fixieren                   */
+        	
+bei "footer" hinzufügen:
+  clear: both;                /* beendet alle floats               */
+        </textarea><br />
+        <a href="./index.html">nach oben</a>
      
 
       </div>
