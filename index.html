@@ -24,6 +24,7 @@
           <li><a href="./index.html#hintergrund">Hintergründe einbinden</a></li>
           <li><a href="./index.html#flex">Responsives Design</a></li>
           <li><a href="./index.html#nav">Navigation links setzen</a></li>
+          <li><a href="./index.html#tooltip">Tooltip mit CSS</a></li>
           <li><a href="links.html">nützliche Links</a></li>
         </ul>
       </nav>
@@ -310,8 +311,40 @@ bei "main" hinzuügen:
 bei "footer" hinzufügen:
   clear: both;                /* beendet alle floats               */
         </textarea><br />
-        <a href="./index.html">nach oben</a>
-     
+        <hr />
+        <a id="tooltip"><h3>Tooltip mit CSS</h3></a>
+
+        <textarea cols="90" readonly rows="32">
+.tooltip ul { 
+  list-style-type: none;    /* Symbol ausblenden */
+  visibility: hidden;       /* Sichtbarkeit ausschalten */
+  }
+.tooltip li {
+    float: left;              /* setzt <ul> horizontal */
+    margin-right: 2em;        /* Abstand nach rechts */
+  }
+.tooltip li > span {
+  visibility: visible;      /* Sichtbarkeit einschalten */
+}
+.tooltip li:hover {         /* Maus schwebt ueber <li> */
+  visibility: visible;      /* Sichtbarkeit einschalten */
+}
+.tooltip li > div {                /* Ausgabe des Tipps */
+  position: absolute;              /* absolute Positionierung auf einer Seite */
+  top: 3ex; left: 12em;            /* Position im Anzeigebereich */
+  /* Make up fuer die Meldung im <div> */
+  border: 1px solid black;         /* Rahmen */
+  padding: 4pt 1em;                /* Innen-Abstand */
+  border-radius: 3pt;              /* Ecken des Rahmens abrunden */
+  min-width: 13em;                 /* Mindest-Breite */
+  box-shadow: 2px 2px 5px black;   /* Schattierung */
+  background: linear-gradient(to bottom, #ddd, #aaa);  /* Farbverlauf */
+}     
+.tooltip::after { clear:both; }
+hr {
+  clear: both;              /* beendet float */>
+}</textarea><br />
+   
 
       </div>
       <a href="./index.html">nach oben</a>
@@ -325,5 +358,4 @@ bei "footer" hinzufügen:
         <a id="tabellen"><h3>Styles für Tabellen und Listen</h3></a>
 
         <textarea cols="90" readonly rows="12"></textarea><br />
-        <a href="./index.html">nach oben</a>
 -->
