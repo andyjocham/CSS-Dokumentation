@@ -32,7 +32,7 @@
           <li><a href="./index.html#tooltip">Tooltip mit CSS</a></li>
           <li><a href="./index.html#bilder">Bildmanipulation mit CSS</a></li>
           <li><a href="./index.html#quellen">verschiedene CSS Quellen</a></li>
-          <li><a href="links.html">nützliche Links</a></li>
+          <li><a href="links.html">nützliche Webseiten</a></li>
         </ul>
       </nav>
       <div class="textbereich">
@@ -85,6 +85,35 @@ CSS-Datei: standard.css
     &lth1&gttext&lt/h1&gt
             ...</textarea
         ><br />
+        eigene ID/Class vergeben:
+        <textarea cols="80" readonly rows="10">
+<p class="selber"> /* in HTML */
+
+.selber { color:red; font-size:24pt } /*in CSS*/
+oder div.selber /* gilt dann nur für div Container */
+
+<p id="selber">
+
+#selber { color:red; font-size:24pt }
+      </textarea
+        >
+        <h3>ID oder Klasse – wann nimmt man was?</h3>
+        <ul>
+          <li>
+            Beide bieten die Möglichkeit, eigene Namenszusätze für HTML Elemente
+            zu vergeben.
+          </li>
+          <li>
+            Eine id ist einmalig und darf auf einer Webseite nur einmal
+            vorkommen.
+          </li>
+          <li>Eine class darf auf einer Webseite mehrfach verwendet werden.</li>
+        </ul>
+
+        Die Hauptbereiche der Beispielseite wie Kopfbereich oder Textbereich
+        bekommen eine id, weil sie pro Seite einmalig sind. <br>
+        Andere Elemente wie z. B. Infoboxen können hingegen mehrfach auftreten und bekommen deshalb
+        eine .class
         <hr />
         <a id="syntax"><h3>Syntax von CSS-Angaben</h3></a>
 
