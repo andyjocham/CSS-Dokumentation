@@ -8,17 +8,21 @@
 
   <body>
     <main>
-      <div id="logo"><a href="./index.html"><img src="./images/css.png" /></a></div>
+      <div id="logo">
+        <a href="./index.html"><img src="./images/css.png" /></a>
+      </div>
       <header>
         <h1 style="text-align: center">
           CSS Dokumentation (cascading style sheets)
         </h1>
       </header>
       <nav>
-          <ul>
+        <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./index.html#syntax">Syntax von CSS</a></li>
-          <li><a href="./index.html#verschiedene">verschiedene CSS Angaben</a></li>
+          <li>
+            <a href="./index.html#verschiedene">verschiedene CSS Angaben</a>
+          </li>
           <li><a href="./index.html#werte">Wert Angaben</a></li>
           <li><a href="./index.html#links">Links optisch verändern</a></li>
           <li><a href="./index.html#tabellen">Tabellen und Listen</a></li>
@@ -26,6 +30,8 @@
           <li><a href="./index.html#flex">Responsives Design</a></li>
           <li><a href="./index.html#nav">Navigation links setzen</a></li>
           <li><a href="./index.html#tooltip">Tooltip mit CSS</a></li>
+          <li><a href="./index.html#bilder">Bildmanipulation mit CSS</a></li>
+          <li><a href="./index.html#quellen">verschiedene CSS Quellen</a></li>
           <li><a href="links.html">nützliche Links</a></li>
         </ul>
       </nav>
@@ -39,14 +45,14 @@
         <h3>Verwendung von CSS:</h3>
         <strong>inline:</strong> Option (style) zum Tag<br />
         CSS-Formatierung gilt nur für diesen Tag an dieser Stelle
-        <textarea cols="90" readonly rows="1">
+        <textarea cols="80" readonly rows="1">
 &lt h1 style="CSS-Angabe1; CSS-Angabe2;"&gtText &lt/h1&gt</textarea
         >
         <br />
 
         <strong>Datei-bezogen:</strong> CSS-Angaben im head-Tag<br />
         CSS-Formatierung gilt für jeden Tag in der Datei
-        <textarea cols="90" readonly rows="9">
+        <textarea cols="80" readonly rows="9">
 &lthead&gt
     ...
     &ltstyle rel="stylesheet"&gt
@@ -62,7 +68,7 @@
         <strong> externe Datei:</strong> eigene CSS-Datei<br />
         CSS-Formatierung erfolgt in einer eigenen Datei und kann somit in
         mehreren HTML-Seiten eingebunden werden<br />
-        <textarea cols="90" readonly rows="15">
+        <textarea cols="80" readonly rows="15">
 CSS-Datei: standard.css
     body { CSS-Angabe1; CSS-Angabe2; }
     h1 { CSS-Angabe1; CSS-Angabe2; }
@@ -89,7 +95,7 @@ CSS-Datei: standard.css
           <li>Einrückungen bzw. Leerstellen haben keine Auswirkung</li>
           <li>Kommentare (mehrzeilig) mit /* und */</li>
         </ul>
-        <textarea cols="90" readonly rows="10">
+        <textarea cols="80" readonly rows="10">
 tag { CSS-Angabe1 : Wert; CSS-Angabe2 : Wert; }
   Bsp: Überschrift "h1" in roter Schrift und 24pt Größe
 
@@ -118,9 +124,24 @@ tag { CSS-Angabe1 : Wert; CSS-Angabe2 : Wert; }
           <li>rgb(120, 80, 240) --&gt rot 120, grün 80, blau 240</li>
         </ul>
 
-
         <hr />
         <a id="verschiedene"><h3>verschiedene CSS-Angaben:</h3></a>
+
+        Text Angaben:
+
+        <ul>
+          <li>font-family: Verdana;</li>
+          <li>font-size: 24pt;</li>
+          <li>font-style: italic;</li>
+          <li>text-align: center; /* left, right, justify (Blocksatz) */</li>
+          <li>
+            text-decoration:underline /* none um zb bei Link das unterstrichene
+            zu entfernen*/;
+          </li>
+          <li>word-spacing: 30pt;</li>
+          <li>letter-spacing: 2pt; /* Abstand zwischen Buchstaben*/</li>
+          <li>line-height: 2pt;</li>
+        </ul>
 
         Margin- bzw. Padding-Angaben:
         <ul>
@@ -138,7 +159,7 @@ tag { CSS-Angabe1 : Wert; CSS-Angabe2 : Wert; }
           </li>
         </ul>
 
-        Border-Angabe:
+        Border-Angaben:
         <ul>
           <li>border: Linien-Dicke Linien-Art Linien-Farbe</li>
           <li>border-top: Linien-Dicke Linien-Art Linien-Farbe /* oben */</li>
@@ -168,7 +189,7 @@ tag { CSS-Angabe1 : Wert; CSS-Angabe2 : Wert; }
         <a id="links"><h3>Links optisch verändern:</h3></a>
 
         Standard-Optik fuer alle Links
-        <textarea cols="90" readonly rows="6">
+        <textarea cols="80" readonly rows="6">
 a {
   font-weight: bold;                     /* Schrift-Gewicht (fett)    */
   text-decoration: none;                 /* Unterstreichung entfernen */
@@ -176,7 +197,7 @@ a {
 }</textarea
         >
         Link-Zustände anpassen
-        <textarea cols="90" readonly rows="4">
+        <textarea cols="80" readonly rows="4">
 a:visited { color: #2020aa; }
 a:focus   { color: #aaaa20; }
 a:hover   { color: #20aa20; }
@@ -184,7 +205,7 @@ a:active  { color: orange; }</textarea
         >
 
         Standard-Optik fuer alle Button-Links
-        <textarea cols="90" readonly rows="13">
+        <textarea cols="80" readonly rows="13">
 a.knopf { 
   border: 1px solid black;
   padding: 4pt 1em 4pt;
@@ -211,12 +232,10 @@ a.knopf:hover, a.knopf:focus, a.knopf:active {
           <li>active : gedrückter Link<br /><br /></li>
         </ul>
 
-
-
         <hr />
         <a id="tabellen"><h3>Styles für Tabellen und Listen</h3></a>
 
-        <textarea cols="90" readonly rows="12">
+        <textarea cols="80" readonly rows="12">
 table {
 width: 40%;
 }
@@ -236,11 +255,10 @@ ol {style list-style-type: lower-roman, upper-roman, decimal, upper-latin, lower
         >
         <br />
 
-
         <hr />
         <a id="hintergrund"><h3>Hintergrundbilder mit CSS einbinden</h3></a>
 
-        <textarea cols="90" readonly rows="13">
+        <textarea cols="80" readonly rows="13">
 .standard { background-image: url(images/jlh_hand-op42.jpeg); }
 .noRepeat { background-image: url(images/jlh_hand-op42.jpeg);
             background-repeat: no-repeat; }
@@ -252,14 +270,13 @@ ol {style list-style-type: lower-roman, upper-roman, decimal, upper-latin, lower
             background-repeat: no-repeat; 
             background-position: bottom right; }
 .attach   { background-image: url(images/jlh_hand-op42.jpeg); 
-            background-attachment: fixed;  }</textarea><br />
+            background-attachment: fixed;  }</textarea
+        ><br />
 
-        
-        
         <hr />
         <a id="flex"><h3>Responsives Design mit Flex</h3></a>
 
-        <textarea cols="90" readonly rows="10">
+        <textarea cols="80" readonly rows="10">
 <style rel="stylesheet">
   .responsive { display: flex; }
   .left  { flex: 70%; background-color: #222; color: #ddd; padding: 0.5em; }
@@ -269,11 +286,12 @@ ol {style list-style-type: lower-roman, upper-roman, decimal, upper-latin, lower
     .responsive { flex-direction: column; }
   }
 </style>
-        </textarea><br />
-     
- <a id="viewport"><h3>Responsives Design mit Viewport</h3></a>
+        </textarea
+        ><br />
 
-        <textarea cols="90" readonly rows="17">
+        <a id="viewport"><h3>Responsives Design mit Viewport</h3></a>
+
+        <textarea cols="70" readonly rows="17">
 <style rel="stylesheet">
   * { box-sizing: border-box; }
   nav { overflow: hidden; background-color: #222; }
@@ -290,12 +308,13 @@ ol {style list-style-type: lower-roman, upper-roman, decimal, upper-latin, lower
     }	
   }
   </style>
-        </textarea><br />
+        </textarea
+        ><br />
 
         <hr />
         <a id="nav"><h3>Navigation links setzen</h3></a>
 
-        <textarea cols="90" readonly rows="16">
+        <textarea cols="80" readonly rows="16">
           bei "nav" hinzufügen:
   float: left;                /* Navigation links setzen           */
   width: 10em;                /* Breite fixieren                   */
@@ -311,11 +330,12 @@ bei "main" hinzuügen:
         	
 bei "footer" hinzufügen:
   clear: both;                /* beendet alle floats               */
-        </textarea><br />
+        </textarea
+        ><br />
         <hr />
         <a id="tooltip"><h3>Tooltip mit CSS</h3></a>
 
-        <textarea cols="90" readonly rows="32">
+        <textarea cols="80" readonly rows="30">
 .tooltip ul { 
   list-style-type: none;    /* Symbol ausblenden */
   visibility: hidden;       /* Sichtbarkeit ausschalten */
@@ -344,11 +364,94 @@ bei "footer" hinzufügen:
 .tooltip::after { clear:both; }
 hr {
   clear: both;              /* beendet float */>
-}</textarea><br />
-   
+}</textarea
+        ><br />
+        <hr />
+        <a id="bilder"><h3>Bildmanipulation mit CSS</h3></a>
 
+        <textarea cols="80" readonly rows="23">
+<style rel="stylesheet">
+.bild > img { margin-top: 100px; 
+rotate: 90deg;
+filter: hue-rotate(200deg) blur(5px) brightness(150%)
+        saturate(500%) contrast(200%) invert(100%);
+/* filter: opacity(50%);    Deckkraft */
+/* filter: grayscale(100%); schwarz-weiss */
+/* filter: sepia(100%);     Sepia */
+/* filter: blur(5px);       verschwommen */
+/* filter: contrast(20%);   Kontrast */
+/* filter: brightness(80%);    Helligkeit */
+/* filter: invert(100%);      invertieren */
+/* filter: saturate(500%);     Saettigung */
+/* filter: hue-rotate(180deg);    Farbton */
+/* transform: scaleX(-1);      horizontal spiegeln */
+/* transform: scaleY(-1);       vertikal spiegeln */
+}
+h3 { margin-top: 100px; }
+h3:hover { margin-top: 100px;
+          filter: blur(2px); rotate: 180deg; 
+          color: red; transition-duration: 10s;}
+</style>
+</textarea
+        ><br />
+
+        <textarea cols="115" readonly rows="24">
+<style rel="stylesheet">
+body { font-family: Verdana, Sans-serif; color: white; }
+h3 {color: black; }
+.verlauf1 { background: linear-gradient(red, blue); padding: 5em; }
+.verlauf2 { background: linear-gradient(to left, red, blue); padding: 5em; }
+.verlauf3 { background: linear-gradient(to top left, red, blue); padding: 5em; }
+.rainbow  { background: linear-gradient(to left, indigo, blue, green, yellow, orange, red, violet); padding: 5em; }
+.rainbow:hover { background: linear-gradient(to right, indigo, blue, green, yellow, orange, red, violet); padding: 5em; }
+.rainbowRund { padding: 10em; 
+  background: radial-gradient(indigo, blue, green, yellow, orange, red, violet); 
+  transition-duration: 1s; } 
+.rainbowRund:hover { padding: 20em;
+  background: radial-gradient(violet, red, orange, yellow, green, blue, indigo);
+  transition-duration: 1s; rotate: 180deg; }
+</style>
+<div class="verlauf1">
+  <strong>background: linear-gradient(red, blue)</strong>
+<div class="verlauf2">
+  <strong>background: linear-gradient(to left, red, blue)</strong>
+<div class="rainbow">
+  <strong>background: linear-gradient(to left, indigo, blue, green, yellow, orange, red, violet)</strong>
+<div class="rainbowRund">
+  <strong>background: radial-gradient(indigo, blue, green, yellow, orange, red, violet)</strong>
+</textarea
+        ><br />
+        <hr />
+        <a id="quellen"><h3>Arbeiten mit mehreren CSS Quellen</h3></a>
+        Wird eine Eigenschaft mehrfach deklariert, so gilt in der Regel der
+        zuletzt festgelegte Wert.<br />
+        Werden Eigenschaften in einem style-Attribut festgelegt, so ist diese
+        Eigenschaft spezifischer als jeder Regelsatz in einem Stylesheet (Regeln
+        innerhalb von style-Attributen können nur durch die Verwendung von
+        !important überschrieben werden).
+
+        <textarea cols="80" readonly rows="18">
+  - Berechnung der Spezifität mit Berücksichtigung des style-Attributs
+  *              /* A=0, B=0, C=0, D=0, Spezifität 0 0 0 0 */  weniger wichtig
+  h1             /* A=0, B=0, C=0, D=1, Spezifität 0 0 0 1 */
+  ul li          /* A=0, B=0, C=0, D=2, Spezifität 0 0 0 2 */
+  a::after       /* A=0, B=0, C=0, D=2, Spezifität 0 0 0 2 */
+  p:first-child  /* A=0, B=0, C=1, D=1, Spezifität 0 0 1 1 */
+  a:not([href])  /* A=0, B=0, C=1, D=1, Spezifität 0 0 1 1 */
+  ul.nav [href]  /* A=0, B=0, C=2, D=1, Spezifität 0 0 2 1 */
+  #author        /* A=0, B=1, C=0, D=0, Spezifität 0 1 0 0 */
+  #editor p      /* A=0, B=1, C=0, D=1, Spezifität 0 1 0 1 */
+  style=""       /* A=1, B=0, C=0, D=0, Spezifität 1 0 0 0 */ wichtig
+
+  border-left-width: medium !important;
+
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/spezial.css">
+</textarea
+        ><br />
+
+        <a href="./index.html">nach oben</a>
       </div>
-      <a href="./index.html">nach oben</a>
     </main>
   </body>
 </html>
@@ -358,5 +461,5 @@ hr {
         <hr />
         <a id="tabellen"><h3>Styles für Tabellen und Listen</h3></a>
 
-        <textarea cols="90" readonly rows="12"></textarea><br />
+        <textarea cols="80" readonly rows="12"></textarea><br />
 -->

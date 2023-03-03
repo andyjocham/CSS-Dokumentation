@@ -33,6 +33,7 @@ a {
 }
 body {
   font: 100% Courier New;
+  letter-spacing: -1px;
   margin-top: 5ex;
   font-size: 12pt;
   line-height: 26px;
