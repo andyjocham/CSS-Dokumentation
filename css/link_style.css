@@ -1,0 +1,31 @@
+
+a:visited {
+  color: #84c754;
+}
+a:focus {
+  color: #aaaa20;
+}
+a:hover {
+  color: #20aa20;
+}
+a:active {
+  color: orange;
+}
+
+a {
+  background-color: #202020;
+  color: #84c754;
+  text-decoration: none;
+  font-weight: bold;
+}
+body {
+  font: 100% Courier New;
+  letter-spacing: -1px;
+  margin-top: 5ex;
+  margin-left: 5ex;
+  font-size: 12pt;
+  line-height: 26px;
+  background-color: #202020;
+  color: #84c754;
+}
+
